@@ -1,43 +1,18 @@
 /**
- * normal function
- */
-const square = function(number){
-    return number * number;
-}
-/**
- * arrow function after es6 
- */
-const square1 = (number)=>{
-    return number * number;
-}
-/**
- * Single parameter
- */
-const square2 = number=>{
-    return number * number;
-}
-/**
- * zero parameter
- */
-const square3 = ()=>{
-    return number * number;
-}
-/**
- * SINGLE LINE RETURN
- */
-const square4 = number => number * number;
-
-/**
- * --------------------------------------------------------------------------
- * Where it is useful
+ * ES6 map
+ * render a list of items
  */
 
-const jobs = [
-    {id:1, isActive:true},
-    {id:2, isActive:true},
-    {id:3, isActive:false},
-];
+const colors = ['red','green','blue'];
 
-const activeJobs = jobs.filter(function(job){return JSON.isActive;});
-const activeJobs1 = jobs.filter((job)=> job.isActive);
-console.log(activeJobs1);
+
+const items1 = colors.map(color=>'<li>'+color +'</li>');
+
+
+/**
+ * template literals
+ */
+
+const items2 = colors.map(color=>`<li>${color}</li>`)
+
+console.log(items2);
